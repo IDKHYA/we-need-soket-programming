@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "vending-machine-refactor"
+version = "0.2.0"
+description = "Refactored vending machine domain for Python + Excel storage"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "openpyxl>=3.1.0",
+    "PySide6>=6.7.0",
+    "fastapi>=0.115.0",
+    "uvicorn>=0.30.0",
+    "httpx>=0.27.0",
+    "SQLAlchemy>=2.0.0",
+    "pydantic>=2.0.0",
+]
+
+[project.scripts]
+vending-machine-gui = "vending_machine.presentation.pyside_gui:main"
+vending-machine-cli = "vending_machine.presentation.cli:main"
+vending-machine-server = "vending_machine.server.runner:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
