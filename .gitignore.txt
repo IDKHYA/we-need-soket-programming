@@ -1,0 +1,20 @@
+# Python 관련
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.pytest-tmp/
+pytest-cache-files-*/
+tmp*/
+*.egg-info/
+
+# 데이터 및 임시 파일
+vending_machine_refactor/data/server/
+*.json.meta
+*.xlsx
+
+# 환경 변수 및 가상환경
+.venv/
+venv/
+.env
